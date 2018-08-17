@@ -3,15 +3,21 @@ export default class App extends preact.Component {
     super();
 
     this.state = {
-      name: '张三',
+      data: { loading: true },
     };
 
     this.$refs = {};
   }
 
+  componentDidMount() {
+    fetch('http://t.helianshare.com:8005/api/v1/initial')
+      .then(v => v.json())
+      .then(v => this.setState({ data: { data: v } }));
+  }
+
   render() {
     return (
-      <div>Hello {this.state.name}!</div>
+      <pre style={{ fontSize: 14 }}>{JSON.stringify(this.state.data, null, '  ')}!</pre>
     );
   }
 }

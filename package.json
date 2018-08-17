@@ -46,7 +46,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "normalize.css": "^8.0.0",
-    "preact": "^8.3.1"
+    "preact": "^8.3.1",
+    "purecss": "^1.0.0"
   }
 }

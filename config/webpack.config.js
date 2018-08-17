@@ -11,7 +11,7 @@ module.exports = {
   mode: 'none',
   devtool: false,
   entry: {
-    'app': './src/index.js',
+    app: './src/index.js',
   },
   module: {
     rules: [
