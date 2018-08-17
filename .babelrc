@@ -1,0 +1,27 @@
+{
+  "presets": [
+    "react",
+    "stage-0",
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": [
+            "last 2 versions"
+          ]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "transform-runtime",
+    [
+      "transform-react-jsx",
+      {
+        "pragma": "preact.h"
+      }
+    ]
+  ],
+  "comments": true
+}
