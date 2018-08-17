@@ -21,7 +21,8 @@
       {
         "pragma": "preact.h"
       }
-    ]
+    ],
+    "transform-decorators-legacy"
   ],
   "comments": true
 }
