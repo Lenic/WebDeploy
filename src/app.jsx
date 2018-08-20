@@ -136,7 +136,7 @@ export default class App extends preact.Component {
             <label>部署地址：</label>
             <select class="pure-input-1-2" value={form.machine || '-1'} onChange={this.changeMachineHandler}>
               <option value="-1">--</option>
-              {machines.map(({ name }) => (<option value={name}>{name}</option>))}
+              {machines.map(({ name }) => (<option value={name}>{name.slice(7)}</option>))}
             </select>
           </div>
 
