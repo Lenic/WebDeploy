@@ -6,10 +6,19 @@ export default class App extends preact.Component {
   constructor() {
     super();
 
+    let projectName = '--';
+
+    const url = getPageParameter('url');
+    if (url) {
+      const segments = url.split('/');
+
+      projectName = segments.slice(segments.length - 2, segments.length - 1);
+    }
+
     this.state = {
       submitEnabled: true,
       dataSource: { loading: true },
-      projectName: 'doctor-website',
+      projectName,
       form: {},
       infos: [],
     };
