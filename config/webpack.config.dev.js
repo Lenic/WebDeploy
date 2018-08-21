@@ -46,7 +46,7 @@ module.exports = merge(basicConfig, {
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new HtmlWebpackPlugin({
-      title: '编辑器',
+      title: '自动部署程序',
       template: 'config/index.html',
     }),
     new MiniCssExtractPlugin({

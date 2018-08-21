@@ -1,59 +1,23 @@
-.container {
-  margin: 0;
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
+* {
+  user-select: none;
 }
 
-.container>form.pure-form {
-  @media screen and (min-width: 1280px) {
-    font-size: .6rem;
+#app {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  & .for-eye {
+    background-color: rgba(127, 255, 170, .2);
   }
-  flex: 1;
-  & fieldset:last-child {
-    border-top: 1px solid #e5e5e5;
+  & .job-processing-text {
+    color: #888;
   }
-  & legend {
-    text-align: center;
-  }
-  & .pure-control-group {
-    display: flex;
-    justify-content: center;
-    &>.message-inline {
-      width: 10em;
-      color: #2d3a4b;
-      height: 2.25em;
-      line-height: 1.25em;
-      border: 1px solid #ccc;
-      background-color: #fff;
-      padding: 0.5em 0.6em;
-      display: inline-block;
-      box-shadow: inset 0 1px 3px #ddd;
-      border-radius: 4px;
-      vertical-align: middle;
-      box-sizing: border-box;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-    &>select {
-      color: #2d3a4b;
-      width: 10em;
-      line-height: 1.25em;
-      -webkit-appearance: none;
-      background-image: url(./images/drop-down.svg);
-      background-position: calc(100% - .5em);
-      background-size: .75em;
-      background-repeat: no-repeat;
-      padding-right: 1.5em;
-    }
-    &>label {
-      width: initial;
-      height: 2.25em;
-      line-height: 2.25em;
-    }
-    &>button.pure-button {
-      width: 100%;
-    }
+  & .job-processing {
+    width: 3em;
+    flex: none;
+    color: #4dd865;
+    font-size: 1em;
   }
 }

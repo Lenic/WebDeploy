@@ -70,6 +70,10 @@ module.exports = {
     extensions: ['.js', '.jsx', '.attached.less', '.global.less', '.less'],
     alias: {
       '$lib': getPath('lib'),
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat',
+      'create-react-class': 'preact-compat/lib/create-react-class',
+      'react-dom-factories': 'preact-compat/lib/react-dom-factories',
     },
   },
   plugins: [
@@ -77,6 +81,7 @@ module.exports = {
     new webpack.NamedChunksPlugin(),
     new webpack.ProvidePlugin({
       'preact': 'preact',
+      'React': 'preact-compat',
     }),
   ],
   optimization: {

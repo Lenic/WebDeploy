@@ -16,13 +16,22 @@
   ],
   "plugins": [
     "transform-runtime",
+    "transform-react-jsx",
+    "transform-decorators-legacy",
     [
-      "transform-react-jsx",
+      "module-resolver",
       {
-        "pragma": "preact.h"
+        "root": [
+          "."
+        ],
+        "alias": {
+          "react": "preact-compat",
+          "react-dom": "preact-compat",
+          "create-react-class": "preact-compat/lib/create-react-class",
+          "react-dom-factories": "preact-compat/lib/react-dom-factories"
+        }
       }
-    ],
-    "transform-decorators-legacy"
+    ]
   ],
   "comments": true
 }

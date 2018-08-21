@@ -10,29 +10,20 @@
   <title>
     <%= htmlWebpackPlugin.options.title %>
   </title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
   <script>
-    !function (e) {
-      var cl = null
-        , rate = 1920 / 100;
-
-      function fn() {
-        var d = e.document
-          , a = d.documentElement
-          , c = a.getBoundingClientRect().width;
-
-        a.style.fontSize = (c / 19.2) + 'px';
-      }
-
-      window.addEventListener('resize', function () {
-        clearTimeout(cl);
-        cl = setTimeout(fn, 300);
-      }, !1);
-
-      fn();
-    }(window);
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function () {
+        FastClick.attach(document.body);
+      }, false);
+    }
   </script>
 </head>
 
-<body></body>
+<body>
+  <div id="app"></div>
+</body>
 
 </html>
