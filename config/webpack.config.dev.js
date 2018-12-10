@@ -46,7 +46,7 @@ module.exports = merge(basicConfig, {
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new HtmlWebpackPlugin({
-      api: 'http://t.helianshare.com:8005',
+      api: 'http://localhost:3000',
       title: '自动部署程序',
       template: 'config/index.html',
     }),
@@ -57,7 +57,7 @@ module.exports = merge(basicConfig, {
   ],
   devServer: {
     hot: false,
-    port: 3000,
+    port: 3001,
     inline: false,
     compress: true,
     host: '0.0.0.0',

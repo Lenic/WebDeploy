@@ -236,7 +236,7 @@ export default class Singleton extends preact.Component {
       v.info = { projectName: v.info.projectName };
       v.currentJobKey = v.jobs[0].key;
 
-      console.log('state', v);
+      console.log('jobs', JSON.stringify(v.jobs));
 
       return v;
     });

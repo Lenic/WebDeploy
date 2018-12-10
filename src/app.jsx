@@ -4,8 +4,8 @@ import TabBar from 'antd-mobile/lib/tab-bar';
 import Batch from './components/batch';
 import Singleton from './components/singleton';
 
-const singleton = (<i className="iconfont" style={{ width: 22, height: 22 }}>&#xea67;</i>)
-  , selectedIconSingleton = (<i className="iconfont" style={{ width: 22, height: 22, color: '#108EE9' }}>&#xea67;</i>)
+const singleton = (<i className="iconfont" style={{ width: 22, height: 22 }}> &#xe694;</i>)
+  , selectedIconSingleton = (<i className="iconfont" style={{ width: 22, height: 22, color: '#108EE9' }}> &#xe694;</i>)
   , batch = (<i className="iconfont" style={{ width: 22, height: 22 }}>&#xe602;</i>)
   , selectedBatch = (<i className="iconfont" style={{ width: 22, height: 22, color: '#108EE9' }}>&#xe602;</i>);
 
@@ -13,7 +13,7 @@ export default class App extends preact.Component {
   constructor() {
     super();
 
-    this.state = { selectedIndex: 0 };
+    this.state = { selectedIndex: 1 };
   }
 
   @autobind

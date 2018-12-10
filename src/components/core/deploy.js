@@ -8,6 +8,8 @@ export default function (parameter) {
       body: JSON.stringify(parameter),
     };
 
+  console.log('Deploy Task:', parameter);
+
   fetch(`${API_PREFIX}/api/v1/build`, opts).then(
     res => {
       if (res.ok) {
