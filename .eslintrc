@@ -21,7 +21,8 @@
     "promise"
   ],
   "globals": {
-    "preact": true
+    "preact": true,
+    "API_PREFIX": true
   },
   "parser": "babel-eslint",
   "rules": {

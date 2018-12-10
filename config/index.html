@@ -14,6 +14,8 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
   <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
   <script>
+    window.API_PREFIX = '<%= htmlWebpackPlugin.options.api %>';
+
     if ('addEventListener' in document) {
       document.addEventListener('DOMContentLoaded', function () {
         FastClick.attach(document.body);

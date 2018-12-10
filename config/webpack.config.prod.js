@@ -49,6 +49,7 @@ module.exports = merge(basicConfig, {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new HtmlWebpackPlugin({
+      api: 'http://t.helianshare.com:8005',
       title: '自动部署程序',
       template: 'config/index.html',
       minify: {

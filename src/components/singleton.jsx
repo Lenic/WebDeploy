@@ -59,7 +59,7 @@ export default class Singleton extends preact.Component {
   }
 
   componentDidMount() {
-    fetch('http://t.helianshare.com:8005/api/v1/initial')
+    fetch(`${API_PREFIX}/api/v1/initial`)
       .then(v => v.json())
       .then(v => this.setState(state => {
         const machines = defaultItems.concat(v.machines.map(v => ({
@@ -236,6 +236,8 @@ export default class Singleton extends preact.Component {
       v.info = { projectName: v.info.projectName };
       v.currentJobKey = v.jobs[0].key;
 
+      console.log('state', v);
+
       return v;
     });
   }
@@ -280,8 +282,8 @@ export default class Singleton extends preact.Component {
           arrow="horizontal"
           extra={project.label}
           onClick={this.showProjects}>
-          容器名称
-          <Brief>根据容器名称定位路径</Brief>
+          目标项目
+          <Brief>根据目标项目定位路径</Brief>
         </Item>
         <Item
           arrow="horizontal"
@@ -353,8 +355,8 @@ export default class Singleton extends preact.Component {
                   <Brief>部署到哪台机器</Brief>
                 </Item>
                 <Item className="for-eye" extra={v.project}>
-                  容器名称
-                  <Brief>根据容器名称定位路径</Brief>
+                  目标项目
+                  <Brief>根据目标项目定位路径</Brief>
                 </Item>
                 <Item className="for-eye" extra={v.notification}>
                   通知对象

@@ -1,4 +1,4 @@
-import Deferred from '$lib/deferred';
+import Deferred from '@lenic/deferred';
 
 export default function (parameter) {
   const defer = Deferred()
@@ -8,7 +8,7 @@ export default function (parameter) {
       body: JSON.stringify(parameter),
     };
 
-  fetch('http://t.helianshare.com:8005/api/v1/build', opts).then(
+  fetch(`${API_PREFIX}/api/v1/build`, opts).then(
     res => {
       if (res.ok) {
         res.json().then(v => defer.resolve(v.id));

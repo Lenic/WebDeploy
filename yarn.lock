@@ -82,6 +82,11 @@
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/@csstools/convert-colors/download/@csstools/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
 
+"@lenic/deferred@^1.0.2":
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/@lenic/deferred/download/@lenic/deferred-1.0.2.tgz#07ab353dda7c1e8860e089fffb55f13385031125"
+  integrity sha1-B6s1Pdp8Hohg4In/+1XxM4UDESU=
+
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
   resolved "http://registry.npm.taobao.org/@webassemblyjs/ast/download/@webassemblyjs/ast-1.5.13.tgz#81155a570bd5803a30ec31436bc2c9c0ede38f25"

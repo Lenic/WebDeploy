@@ -25,10 +25,11 @@ export default class App extends preact.Component {
     return (
       <div id="app">
         <TabBar>
-          <TabBar.Item title="单独部署"
+          <TabBar.Item
+            title="手工部署"
             key="singleton"
             icon={singleton}
-            selected={true}
+            selected={this.state.selectedIndex === 0}
             selectedIcon={selectedIconSingleton}
             onPress={this.changeSelectedHandler.bind(this, 0)}>
             <Singleton />
@@ -37,7 +38,7 @@ export default class App extends preact.Component {
             title="批量部署"
             key="batch"
             icon={batch}
-            selected={false}
+            selected={this.state.selectedIndex === 1}
             selectedIcon={selectedBatch}
             onPress={this.changeSelectedHandler.bind(this, 1)}>
             <Batch />

@@ -58,6 +58,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
+    "@lenic/deferred": "^1.0.2",
     "antd-mobile": "^2.2.3",
     "autobind-decorator": "^2.1.0",
     "preact": "^8.3.1",
